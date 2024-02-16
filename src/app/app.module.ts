@@ -1,30 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { AppRoutingModule } from './app.routing';  // Ajusta la ruta del import según tu estructura de archivos
 import { AppComponent } from './app.component';
-import { Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
-import { RouterModule } from '@angular/router';
-import { RegisterComponent } from './pages/register/register.component'; 
+import { PrimeNgModule } from './primeNg.Module';
 
-const routes: Routes = [
-  {
-    path: 'login',
-    component: LoginComponent
-  }
-];
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    
+    
   ],
   imports: [
     BrowserModule,
-    RouterModule
+    AppRoutingModule ,
+    PrimeNgModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
